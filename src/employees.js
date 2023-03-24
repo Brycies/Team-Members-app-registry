@@ -9,7 +9,7 @@ const Employees = () => {
       fullName: "Bob James",
       designation: "JavaScript Developer",
       gender: "Male",
-      teamNAme: "TeamA",
+      teamName: "TeamA",
     },
 
     {
@@ -17,7 +17,7 @@ const Employees = () => {
       fullName: "Jill Bailey",
       designation: "Node Developer",
       gender: "Female",
-      teamNAme: "TeamA",
+      teamName: "TeamA",
     },
 
     {
@@ -25,7 +25,7 @@ const Employees = () => {
       fullName: "Gail Shepherd",
       designation: "Java Developer",
       gender: "Female",
-      teamNAme: "TeamA",
+      teamName: "TeamA",
     },
 
     {
@@ -33,7 +33,7 @@ const Employees = () => {
       fullName: "Sam Reynolds",
       designation: "React Developer",
       gender: "Male",
-      teamNAme: "TeamB",
+      teamName: "TeamB",
     },
 
     {
@@ -41,7 +41,7 @@ const Employees = () => {
       fullName: "David Henry",
       designation: "DotNetDeveloper",
       gender: "Male",
-      teamNAme: "TeamB",
+      teamName: "TeamB",
     },
 
     {
@@ -49,7 +49,7 @@ const Employees = () => {
       fullName: "Sarah Blake",
       designation: "SQL Server DBA",
       gender: "Female",
-      teamNAme: "TeamB",
+      teamName: "TeamB",
     },
 
     {
@@ -57,7 +57,7 @@ const Employees = () => {
       fullName: "James Bennet",
       designation: "AngularDeveloper",
       gender: "Male",
-      teamNAme: "TeamC",
+      teamName: "TeamC",
     },
 
     {
@@ -65,7 +65,7 @@ const Employees = () => {
       fullName: "Jessica Faye",
       designation: "API Developer",
       gender: "Female",
-      teamNAme: "TeamC",
+      teamName: "TeamC",
     },
 
     {
@@ -73,7 +73,7 @@ const Employees = () => {
       fullName: "lita Stone",
       designation: "C++ Developer",
       gender: "Female",
-      teamNAme: "TeamC",
+      teamName: "TeamC",
     },
 
     {
@@ -81,7 +81,7 @@ const Employees = () => {
       fullName: "Daniel Young",
       designation: "Python Developer",
       gender: "Male",
-      teamNAme: "TeamD",
+      teamName: "TeamD",
     },
 
     {
@@ -89,7 +89,7 @@ const Employees = () => {
       fullName: "Adrian JAcobs",
       designation: "VueDeveloper",
       gender: "Male",
-      teamNAme: "TeamD",
+      teamName: "TeamD",
     },
 
     {
@@ -97,7 +97,7 @@ const Employees = () => {
       fullName: "David Monroe",
       designation: "Graphic Designer",
       gender: "Male",
-      teamNAme: "TeamD",
+      teamName: "TeamD",
     },
   ]);
   return (
@@ -105,29 +105,28 @@ const Employees = () => {
       <div class="row justify-content-center mt-3 mb-3">
         <div class="col-8">
           <div class="card-collection">
-            {employees &&
-              employees.map((employee) => (
-                <div
-                  id={employee.id}
-                  className="card m-2"
-                  style={{ cursor: "pointer" }}
-                >
-                  {employee.gender === "male" ? (
-                    <img src={maleProfile} className="card-img-top" />
-                  ) : (
-                    <img src={femaleProfile} className="card-img-top" />
-                  )}
-
-                  <div className="card-body">
-                    <h5 className="card-title ">
-                      Full Name {employee.fullName}{" "}
-                    </h5>
-                    <p className="card-text">
-                      <b>Designation</b> {employees.designation}{" "}
-                    </p>
-                  </div>
+            {employees.map((employee) => (
+              <div
+                id={employee.id}
+                className="card m-2"
+                style={{ cursor: "pointer" }}
+              >
+                {employee.gender === "male" ? (
+                  <img src={maleProfile} className="card-img-top" />
+                ) : (
+                  <img src={femaleProfile} className="card-img-top" />
+                )}
+                ;
+                <div className="card-body">
+                  <h5 className="card-title ">
+                    Full Name {employee.fullName}{" "}
+                  </h5>
+                  <p className="card-text">
+                    <b>Designation</b> {employees.designation}{" "}
+                  </p>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
