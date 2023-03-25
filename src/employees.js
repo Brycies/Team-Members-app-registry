@@ -111,7 +111,7 @@ const Employees = () => {
                 className="card m-2"
                 style={{ cursor: "pointer" }}
               >
-                {employee.gender === "male" ? (
+                {employee.gender === "Male" ? (
                   <img src={maleProfile} className="card-img-top" />
                 ) : (
                   <img src={femaleProfile} className="card-img-top" />
