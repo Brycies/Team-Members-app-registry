@@ -6,8 +6,6 @@ import Employees from "./employees";
 import Footer from "./footer";
 
 function App() {
-
-
   const [selectedTeam, setTeam] = useState("TeamB");
 
   const [employees, setEmployees] = useState([
@@ -108,18 +106,20 @@ function App() {
     },
   ]);
 
+  function handleTeamSelectionChange(event) {
+    setTeam(event.target.value);
+  }
 
-function handleTeamSelectionChange(event) {
-  setTeam{event.target.value};
-}
-
-function handleEmployeeCardClick(event) {
-  const transformedEmployees =  employees.map((employee) => employee.id === parseInt(event.currentTarget.id)
-                                               ?(employee.TeamName === selectedTeam)?{...employee, teamName:''}:{...employee, teamName: selectedTeam}
-                                               :employee);
-   setEmployees(transformedEmployees);                                                                       
-
-}
+  function handleEmployeeCardClick(event) {
+    const transformedEmployees = employees.map((employee) =>
+      employee.id === parseInt(event.currentTarget.id)
+        ? employee.TeamName === selectedTeam
+          ? { ...employee, teamName: "" }
+          : { ...employee, teamName: selectedTeam }
+        : employee
+    );
+    setEmployees(transformedEmployees);
+  }
 
   return (
     <div>
