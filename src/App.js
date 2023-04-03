@@ -1,9 +1,9 @@
 import * as React from "react";
 import "./App.css";
-
 import Header from "./header";
 import Employees from "./employees";
 import Footer from "./footer";
+import { useState } from "react";
 
 function App() {
   const [selectedTeam, setTeam] = useState("TeamB");
@@ -124,7 +124,12 @@ function App() {
   return (
     <div>
       <Header />
-      <Employees />
+      <Employees
+        employees={employees}
+        selectedTeam={selectedTeam}
+        handleEmployeeCardClick={handleEmployeeCardClick}
+        handleTeamSelectionChange={handleTeamSelectionChange}
+      />
       <Footer />
     </div>
   );

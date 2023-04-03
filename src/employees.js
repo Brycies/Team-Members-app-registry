@@ -1,8 +1,12 @@
-import { useState } from "react";
 import femaleProfile from "./Images/femaleProfile.jpg";
 import maleProfile from "./Images/maleProfile.jpg";
 
-const Employees = () => {
+const Employees = ({
+  employees,
+  selectedTeam,
+  handleEmployeeCardClick,
+  handleTeamSelectionChange,
+}) => {
   return (
     <main className="container">
       <div class="row justify-content-center mt-3 mb-3">
